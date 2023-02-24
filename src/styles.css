@@ -27,7 +27,8 @@ button {
 }
 
 button:hover {
-    background-color: #3e4144;
+    background-color: white;
+    border: 1px solid lightblue;
 }
 
 button:focus {
