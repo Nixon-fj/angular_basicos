@@ -9,15 +9,25 @@ export class ModalComponent {
 
   constructor(private elRef: ElementRef) { }
 
-  component: string = 'Click here'
+  component: string = 'Click dentro o fuera del modal'
+
+  closeModal(){
+    let modal = document.getElementById('demo-modal');
+    if(modal?.classList.contains('show')){
+      modal.classList.remove('show');
+    }
+    else{
+      modal?.classList.add('show');
+    }
+  }
 
   @HostListener('document:mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
   if (!this.elRef.nativeElement.contains(event.target)) {
-    this.component = 'Clicked outside the component';
+    this.component = 'Se hizo click fuera del modal';
   }
   if (this.elRef.nativeElement.contains(event.target)) {
-    this.component = 'Clicked inside the component';
+    this.component = 'Se hizo click dentro del modal';
   }
 }
 

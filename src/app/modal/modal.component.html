@@ -1,5 +1,14 @@
-<div class="container">
-    <h1>Inner Component</h1>
-    <h2>{{component}}</h2>
-    
+<div class="wrapper">
+    <a href="#demo-modal" (click)="closeModal()">Open Demo Modal</a>
+</div>
+<div id="demo-modal" class="modal">
+    <div class="modal__content">
+
+        <h1>Modal</h1>
+        <p>Este modal funciona con css, pero tambien esta utilizando el decorador hostlistener de angular</p>
+
+        <a href="#" class="modal__close" (click)="closeModal()">&times;</a>
+
+        <p class="click-here">{{component}}</p>
+    </div>
 </div>

@@ -5,7 +5,7 @@
 
 html,
 body {
-    background: black;
+    background: #222;
     margin: 20px;
     color: #fff;
     -webkit-font-smoothing: antialiased;
@@ -18,17 +18,16 @@ dd {
 button {
     background-color: lightblue;
     border-radius: 5px;
-    border: 0px;
     color: black;
     cursor: pointer;
     margin-right: 5px;
     margin-left: 5px;
     padding: 5px 10px;
+    border: 1px solid lightblue;
 }
 
 button:hover {
     background-color: white;
-    border: 1px solid lightblue;
 }
 
 button:focus {
